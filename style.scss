@@ -1,0 +1,581 @@
+@import "/Users/titianagallina/Desktop/mon_site_web_1/font.scss";
+@import "/Users/titianagallina/Desktop/mon_site_web_1/variable.scss";
+@import "/Users/titianagallina/Desktop/mon_site_web_1/mixin.scss";
+
+
+
+@media screen and (max-width: 2400px) {
+    @include nav_bar;
+
+}
+
+
+@media screen and (min-width: 820px) and (max-width:1023px) {
+    @include nav_bar;
+}
+
+
+@media screen and (max-width:820px) {
+    @include nav_bar_smarphone;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                   ACCUEIL                                  */
+/* -------------------------------------------------------------------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+#accueil {
+    background-color: $blue;
+    width: auto;
+    height: auto;
+
+    .img_home {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        //padding-top: 150px;
+        width: 400px;
+        border-radius: 600px;
+        -webkit-border-radius: 600px;
+        -moz-border-radius: 600px;
+        -ms-border-radius: 600px;
+        -o-border-radius: 600px;
+    }
+
+    .name {
+        text-transform: uppercase;
+        font-family: "aperture";
+        color: $yellow;
+        font-size: 50px;
+        text-align: center;
+    }
+
+    .informations {
+        text-align: center;
+        font-family: $typo_kumbh;
+        color: $white;
+        font-size: 20px;
+    }
+
+    .job_post {
+        text-align: center;
+        font-family: $typo_gruppo;
+        text-transform: uppercase;
+        color: $white;
+        font-size: 25px;
+    }
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                   PROFIL                                   */
+/* -------------------------------------------------------------------------- */
+
+#profil {
+    padding-top: 50px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: $white;
+
+    .about {
+        @include title_blue_aperture;
+    }
+
+    .subtitle_about {
+        @include subtitle_blue;
+    }
+
+    .photo_div {
+        float: left;
+
+        .photo_img {
+            width: 300px;
+            margin-top: 45px;
+        }
+    }
+
+    .text_div {
+        padding-bottom: 15px;
+        text-align: center;
+        padding-top: 90px;
+
+        .subtitle_about {
+            @include subtitle_blue;
+            padding-bottom: 10px;
+            padding-top: 20px;
+        }
+
+        .text_profil {
+            text-align: justify;
+            font-family: $typo_kumbh;
+            font-size: 20px;
+            margin: auto;
+            padding-bottom: 50px;
+
+            .btn_cv {
+                text-decoration: none;
+                color: $blue;
+            }
+        }
+
+    }
+
+    .skill {
+        text-align: center;
+
+        .skill_logo {
+            list-style: none;
+            display: inline-block;
+
+            .img_skill {
+                width: 50px;
+                margin-left: 15px;
+                margin-bottom: 50px;
+            }
+
+            .img_skill:hover {
+                transform: scale(1.80);
+                -webkit-transform: scale(1.80);
+                -moz-transform: scale(1.80);
+                -ms-transform: scale(1.80);
+                -o-transform: scale(1.80);
+            }
+        }
+    }
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                  PORTFOLIO                                 */
+/* -------------------------------------------------------------------------- */
+
+#portfolio {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    width: auto;
+    height: auto;
+    background-color: $blue;
+
+    .about {
+        @include title_yellow_aperture;
+    }
+
+    .item_publicity {
+        background-image: url(/item_publicity.jpeg);
+        @include item_portfolio;
+
+        .title_publicity {
+            @include title_item;
+        }
+    }
+
+    .item_publicity:hover {
+        @include transform_scale_1_09;
+    }
+
+    .item_game {
+        background-image: url(/item_game.jpeg);
+        @include item_portfolio;
+
+        .title_game {
+            @include title_item;
+        }
+    }
+
+    .item_game:hover {
+        @include transform_scale_1_09;
+    }
+
+    .item_travel {
+        background-image: url(/item_travel.jpeg);
+        @include item_portfolio;
+
+        .title_travel {
+            @include title_item;
+        }
+    }
+
+    .item_travel:hover {
+        @include transform_scale_1_09;
+    }
+
+    .item_instagram {
+        background-image: url(/item_instagram.png);
+        @include item_portfolio;
+
+        .title_instagram {
+            @include title_item;
+        }
+    }
+
+    .item_instagram:hover {
+        @include transform_scale_1_09;
+    }
+
+    .item_illustrator {
+        background-image: url(/item_illustrator.jpeg);
+        @include item_portfolio;
+
+        .title_illustrator {
+            @include title_item;
+        }
+    }
+
+    .item_illustrator:hover {
+        @include transform_scale_1_09;
+    }
+
+    .item_wordpress {
+        background-image: url(/item_other.jpeg);
+        @include item_portfolio;
+
+        .title_wordpress {
+            @include title_item;
+        }
+    }
+
+    .item_wordpress:hover {
+        @include transform_scale_1_09;
+    }
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                   CONTACT                                  */
+/* -------------------------------------------------------------------------- */
+#contact {
+    text-align: center;
+    padding-top: 50px;
+    background-color: $white;
+
+    .about {
+        @include title_blue_aperture;
+    }
+
+    .map {
+        border-radius: 15px;
+        -webkit-border-radius: 15px;
+        -moz-border-radius: 15px;
+        -ms-border-radius: 15px;
+        -o-border-radius: 15px;
+        box-shadow: 10px 5px 5px gray;
+        width: 450px;
+    }
+
+    .tel {
+        text-decoration: none;
+        font-family: $typo_kumbh;
+        font-size: 40px;
+        color: $blue;
+    }
+
+    .coordinate {
+        font-family: $typo_gruppo;
+        font-size: 50px;
+        text-align: center;
+        color: $blue;
+    }
+
+    .block_fin {
+        @include footer_blue;
+    }
+
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                    GAME                                    */
+/* -------------------------------------------------------------------------- */
+#body_game {
+    background-color: $white;
+
+    .title_page {
+        @include title_page;
+    }
+
+    main {
+        margin: 0;
+        padding: 0;
+
+        .div_snake {
+            padding-left: 350px;
+            width: 700px;
+            text-align: justify;
+            padding-top: 250px;
+
+            h1 {
+                @include aperture_blue;
+            }
+
+            h3 {
+                @include aperture_blue;
+            }
+
+            p {
+                font-family: $typo_kumbh;
+
+                .lien_github {
+                    @include lien_github;
+                }
+
+            }
+        }
+
+        .div_img_snake {
+            float: left;
+
+            .img_snake {
+                @include item_game_left;
+            }
+        }
+
+    }
+
+    .img_snake:hover {
+        @include transform_scale_1_05;
+    }
+
+    .div_brique {
+        width: 700px;
+        text-align: right;
+        padding-top: 250px;
+        padding-left: 380px;
+
+        h1 {
+            @include aperture_blue;
+        }
+
+        h3 {
+            @include aperture_blue;
+        }
+
+        p {
+            font-family: $typo_kumbh;
+
+            .lien_github {
+                @include lien_github;
+            }
+
+        }
+    }
+
+    .div_img_brique {
+        float: right;
+
+        .img_brique {
+            @include item_game_right;
+        }
+    }
+
+    .block_fin {
+        @include footer_blue;
+    }
+
+}
+
+.img_brique:hover {
+    @include transform_scale_1_05;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                  PUBLICITY                                 */
+/* -------------------------------------------------------------------------- */
+
+#body_publicity {
+    background-color: $white;
+    text-align: center;
+
+    .title_page {
+        @include title_page;
+    }
+
+    .affiche {
+
+        h1 {
+
+            @include aperture_blue;
+        }
+
+        h3 {
+            @include aperture_blue;
+        }
+
+        p {
+            font-family: $typo_kumbh;
+        }
+
+
+        .affiche_1 {
+            margin-top: 150px;
+            @include affiche_publicity;
+        }
+
+        .affiche_2 {
+            margin-top: 50px;
+            @include affiche_publicity;
+        }
+
+        .affiche_3 {
+            margin-top: 50px;
+            @include affiche_publicity;
+        }
+    }
+
+    .block_fin {
+        @include footer_blue;
+    }
+
+
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                  INSTAGRAM                                 */
+/* -------------------------------------------------------------------------- */
+
+#body_instagram {
+    background-color: $white;
+
+    .title_page {
+        @include title_yellow_aperture;
+    }
+
+    .slide {
+        width: 470px;
+        height: 395px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        box-shadow: 15px 5px 5px gray;
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+    }
+
+    .description {
+        text-align: center;
+        padding-top: 600px;
+
+        h3 {
+            @include aperture_blue;
+        }
+
+        p {
+            font-family: $typo_kumbh;
+        }
+
+    }
+
+    .block_fin {
+        margin-top: 20px;
+        @include footer_blue_2;
+    }
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                 SNAKE GAME                                 */
+/* -------------------------------------------------------------------------- */
+
+#body_snake_game {
+    background-color: $white;
+    text-align: center;
+    color: $yellow;
+
+    .div {
+        padding-top: 200px;
+    }
+
+
+    canvas {
+        border: 1px solid $blue;
+        margin-left: 500px;
+        display: flex;
+        background-color: $blue;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .block_fin {
+        margin-top: 88px;
+        @include footer_blue_2;
+    }
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                ILLUSTRATION                                */
+/* -------------------------------------------------------------------------- */
+
+#body_illustration {
+    background-color: $white;
+    text-align: center;
+    color: $yellow;
+
+    .img_illustration {
+        width: 500px;
+        box-shadow: 10px 5px 5px gray;
+        margin-top: 190px;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+    }
+
+    .img_illustration:hover {
+        transform: scale(1.05);
+        -webkit-transform: scale(1.05);
+        -moz-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+        -o-transform: scale(1.05);
+    }
+
+    .div_illustration {
+        h3 {
+            margin-top: 20px;
+            @include aperture_blue;
+        }
+
+        p {
+            color: $blue;
+            font-family: $typo_kumbh;
+            text-align: center;
+        }
+    }
+
+    .block_fin {
+        margin-top: 18px;
+        @include footer_blue_2;
+    }
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                 BRICK BREAK                                */
+/* -------------------------------------------------------------------------- */
+
+#body_brick_break{
+    background-color: $white;
+    text-align: center;
+    color: $yellow;
+
+
+    #myCanvas{
+        background-color: $blue;
+        margin: 0 auto;
+        display: block;
+        margin-top: 150px;
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+        box-shadow: 10px 5px 5px gray;
+}
+
+}
